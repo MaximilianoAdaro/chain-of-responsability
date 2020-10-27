@@ -18,7 +18,7 @@ public class ATMDispenseChain {
   public static void main(String[] args) {
     ATMDispenseChain atmDispenser = new ATMDispenseChain();
     while (true) {
-      int amount = 0;
+      int amount;
       System.out.println("Enter amount to dispense");
       Scanner input = new Scanner(System.in);
       amount = input.nextInt();

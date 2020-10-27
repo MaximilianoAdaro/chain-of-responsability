@@ -1,4 +1,4 @@
-public class Dollar20Dispenser implements DispenserHandler {
+public class Dollar100Dispenser implements DispenserHandler {
 
   private DispenserHandler next;
 
@@ -9,10 +9,10 @@ public class Dollar20Dispenser implements DispenserHandler {
 
   @Override
   public void dispense(Currency cur) {
-    if (cur.getAmount() >= 20) {
-      int num = cur.getAmount() / 20;
-      int remainder = cur.getAmount() % 20;
-      System.out.println("Dispensing " + num + " 20$ note");
+    if (cur.getAmount() >= 100) {
+      int num = cur.getAmount() / 100;
+      int remainder = cur.getAmount() % 100;
+      System.out.println("Dispensing " + num + " 100$ note");
       if (remainder != 0) this.next.dispense(new Currency(remainder));
     } else {
       this.next.dispense(cur);
